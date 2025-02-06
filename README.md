@@ -30,8 +30,8 @@ Ensure you have the following installed:
 ### Steps to Run Locally
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Topsurpass/interactive-booking-form
-   cd interactive-booking-form
+   git clone https://github.com/Topsurpass/multistep-interview
+   cd multistep-interview
    ```
 2. Install dependencies:
    ```sh
@@ -55,10 +55,20 @@ src/
 ├── assets
 │   └── react.svg
 ├── components
+│   ├── @form
+│   │   ├── checkbox.tsx
+│   │   ├── index.tsx
+│   │   ├── select.tsx
+│   │   ├── select2.tsx
+│   │   ├── text-area.tsx
+│   │   └── text-field.tsx
+│   ├── confirm-alert.tsx
 │   └── ui
+│       ├── alert-dialog.tsx
 │       ├── button.tsx
 │       ├── calendar.tsx
 │       ├── card.tsx
+│       ├── checkbox.tsx
 │       ├── form.tsx
 │       ├── input.tsx
 │       ├── label.tsx
@@ -68,7 +78,7 @@ src/
 │       ├── select.tsx
 │       └── textarea.tsx
 ├── data
-│   └── cargo-select-data.tsx
+│   └── index.tsx
 ├── index.css
 ├── lib
 │   ├── helpers.ts
@@ -78,18 +88,21 @@ src/
 │   ├── confirmation
 │   │   └── index.tsx
 │   └── home
-│       ├── cargo-specification-form.tsx
-│       ├── destination-form.tsx
-│       ├── final-review.tsx
+│       ├── cargo-information.tsx
 │       ├── index.tsx
-│       └── pricing-calculator.tsx
+│       ├── pickup-delivery.tsx
+│       ├── pricing-calculator.tsx
+│       ├── review-information.tsx
+│       ├── shipping-method-pricing.tsx
+│       ├── stepper-control.tsx
+│       ├── stepper-label.tsx
+│       ├── steps.ts
+│       └── user-information.tsx
 ├── schemas
 │   └── multiform-schema.tsx
 ├── types
 │   └── cargo-types.ts
 └── vite-env.d.ts
-
-10 directories, 28 files
 ```
 
 ## Building for Production

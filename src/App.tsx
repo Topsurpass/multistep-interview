@@ -1,12 +1,11 @@
-//import "./App.css";
-import ShippingForm from "@/pages/home";
+import RouteRenderer from "@/routes/route-renderer";
 
 function App() {
-	return (
-		<div className="w-full md:max-w-8xl mx-auto p-5">
-			<ShippingForm />
-		</div>
-	);
+  return (
+    <div className="w-full mx-auto overflow-y-hidden">
+      <RouteRenderer />
+    </div>
+  );
 }
 
 export default App;

@@ -1,4 +1,3 @@
-import Box from "@/assets/box.svg";
 import {
   CircleUser,
   ShoppingCart,
@@ -44,50 +43,54 @@ const features = [
 export default function Homepage() {
   const navigate = useNavigate();
   return (
-    <div className="bg-white sm:py-12 min-h-screen">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-20">
-        <div className="mx-auto max-w-2xl lg:text-center space-y-5">
-          <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
-            Everything you need to get Your Cargo shipped
-          </p>
-          <p className="mt-6 text-lg/8 text-gray-600">
-            Get your goods or cargo shipped in 5 simple steps from your location
-            i.e pickup location to your desired destination.
-          </p>
-          <Button
-            className="text-white bg-indigo-600"
-            size="lg"
-            onClick={() => navigate("/shipping")}
-          >
-            Ship Cargo
-          </Button>
-        </div>
-
-        <div className="flex flex-col justify-center items-center">
-          <div className="flex justify-center items-center">
-            <img src={Box} alt="box" className="md:w-1/2" />
+    <div className="bg-white min-h-screen">
+      <div className="px-3 mx-auto max-w-7xl lg:px-8">
+        <section className="pt-12 pb-16 sm:py-24">
+          <div className="grid lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="order-2 lg:order-1 mt-10 lg:mt-0">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                Streamlined Cargo Shipping in 5 Simple Steps
+              </h1>
+              <p className="mt-6 text-lg text-gray-600 leading-8">
+                Experience seamless logistics from pickup to delivery with our
+                intuitive shipping platform.
+              </p>
+              <Button
+                className="mt-8 text-lg px-8 py-6 bg-indigo-600 hover:bg-indigo-700 text-white transition-colors"
+                onClick={() => navigate("/shipping")}
+              >
+                Start Shipping Now
+              </Button>
+            </div>
           </div>
-          <div className="mx-auto">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              {features.map((feature) => (
-                <div key={feature.name} className="relative pl-16">
-                  <dt className="text-base/7 font-semibold text-gray-900">
-                    <div className="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
-                      <feature.icon
-                        aria-hidden="true"
-                        className="size-6 text-white"
-                      />
+        </section>
+        <section className="rounded-xl">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-12">
+              {features.map((feature, index) => (
+                <div
+                  key={feature.name}
+                  className="bg-white p-5 md:p-8 rounded-2xl shadow-sm transition-all hover:shadow-lg border"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex-shrink-0 bg-indigo-100 p-3 rounded-lg">
+                      <feature.icon className="w-8 h-8 text-indigo-600" />
                     </div>
+                    <span className="text-sm font-semibold text-gray-500">
+                      Step {index + 1}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {feature.name}
-                  </dt>
-                  <dd className="mt-2 text-base/7 text-gray-600">
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
                     {feature.description}
-                  </dd>
+                  </p>
                 </div>
               ))}
-            </dl>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

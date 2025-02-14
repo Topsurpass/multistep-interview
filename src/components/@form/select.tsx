@@ -44,7 +44,9 @@ export default function Select({
       name={name}
       render={({ field }) => (
         <FormItem className="space-y-5 text-left">
-          <FormLabel className="text-sm font-medium">{label}</FormLabel>
+          <FormLabel className="md:text-lg font-semibold text-gray-900">
+            {label}
+          </FormLabel>
           <FormSelect onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
               <SelectTrigger className="h-12">
@@ -55,7 +57,7 @@ export default function Select({
               {options.map((data: any) => {
                 return (
                   <SelectItem key={data.value} value={data.value}>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 ">
                       {data.icon || ""}
                       {data.label}
                     </div>

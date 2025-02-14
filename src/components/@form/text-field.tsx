@@ -27,7 +27,9 @@ export default function TextField({
       name={name}
       render={({ field }) => (
         <FormItem className="text-left">
-          <FormLabel>{label}</FormLabel>
+          <FormLabel className="md:text-lg font-semibold text-gray-900 ">
+            {label}
+          </FormLabel>
           <FormControl>
             <Input {...field} {...others} />
           </FormControl>

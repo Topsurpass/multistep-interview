@@ -7,7 +7,7 @@ export default function ShippingAndPricing() {
 	const { control } = useFormContext();
 
 	return (
-		<section className="flex w-full gap-5 flex-col md:flex-row px-5">
+		<section className="flex w-full gap-5 flex-col md:flex-row p-5 border rounded-lg">
 			<div className="w-full space-y-5">
 				<Select
 					control={control}

@@ -5,7 +5,7 @@ export default function PickupDelivery() {
 	const { control } = useFormContext();
 
 	return (
-		<section className="grid gap-y-5 px-5">
+		<section className="grid gap-y-5 p-5 border rounded-lg">
 			<TextField
 				control={control}
 				label="Pickup Location"

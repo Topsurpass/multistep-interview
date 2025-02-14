@@ -4,7 +4,7 @@ import { useFormContext } from "react-hook-form";
 export default function UserInformation() {
   const { control } = useFormContext();
   return (
-    <section className="grid gap-y-5 px-5">
+    <section className="grid gap-y-5 p-5 border rounded-xl">
       <TextField
         control={control}
         label="Full Name"

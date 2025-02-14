@@ -107,21 +107,21 @@ export default function ReviewInformation() {
 }
 
 const SectionContainer = ({
-	icon,
-	title,
-	children,
+  icon,
+  title,
+  children,
 }: {
-	icon: React.ReactNode;
-	title: string;
-	children: React.ReactNode;
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
 }) => (
-	<div className="bg-white rounded-xl shadow-sm border border-gray-100 ">
-		<div className="flex items-center gap-3 px-6 py-4 border-b border-gray-100">
-			<div className="bg-primary/10 p-2 rounded-lg">{icon}</div>
-			<h3 className=" font-semibold text-gray-800">{title}</h3>
-		</div>
-		<div className="p-2 md:p-6">{children}</div>
-	</div>
+  <div className="bg-white rounded-xl shadow-sm border border-gray-100 md:text-lg font-semibold text-gray-900 ">
+    <div className="flex items-center gap-3 px-6 py-4 border-b border-gray-100">
+      <div className="bg-primary/10 p-2 rounded-lg">{icon}</div>
+      <h3 className=" font-semibold text-gray-800">{title}</h3>
+    </div>
+    <div className="p-2 md:p-6">{children}</div>
+  </div>
 );
 
 const InfoGrid = ({ children }: { children: React.ReactNode }) => (

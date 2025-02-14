@@ -26,26 +26,26 @@ export default function CheckBox({
 	...others
 }: ITextField) {
 	return (
-		<FormField
-			control={control}
-			name={name}
-			render={({ field }) => (
-				<FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 shadow">
-					<FormControl>
-						<Checkbox
-							checked={field.value}
-							onCheckedChange={field.onChange}
-							{...others}
-						/>
-					</FormControl>
-					<div className="space-y-1 leading-none">
-						<FormLabel>{label}</FormLabel>
-						{hasDescription && (
-							<FormDescription>{description}</FormDescription>
-						)}
-					</div>
-				</FormItem>
-			)}
-		/>
-	);
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormItem className="flex flex-row items-center space-x-3 space-y-0 rounded-md border p-4 shadow">
+          <FormControl>
+            <Checkbox
+              checked={field.value}
+              onCheckedChange={field.onChange}
+              {...others}
+            />
+          </FormControl>
+          <div className="space-y-1 leading-none">
+            <FormLabel className="md:text-lg font-semibold text-gray-900 ">
+              {label}
+            </FormLabel>
+            {hasDescription && <FormDescription>{description}</FormDescription>}
+          </div>
+        </FormItem>
+      )}
+    />
+  );
 }

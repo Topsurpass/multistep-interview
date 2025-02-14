@@ -12,7 +12,7 @@ import ShippingAndPricing from "./shipping-method-pricing";
 import ReviewInformation from "./review-information";
 import ConfirmAlert from "@/components/confirm-alert";
 import OrderConfirmation from "../confirmation";
-import Cargo from "@/assets/cargo.svg";
+// import Cargo from "@/assets/cargo.svg";
 
 
 const initialValues = {
@@ -106,13 +106,13 @@ export default function ShippingForm() {
 	}
 
 	return (
-    <div className="flex md:flex-row flex-col">
-      <div className="flex flex-col justify-center items-center">
+    <div className="mx-auto md:max-w-7xl lg:px-8">
+      {/* <div className="flex flex-col justify-center items-center">
         <img src={Cargo} alt="cargo" />
-      </div>
+      </div> */}
       <div className="w-full mt-10 md:pr-5 px-3">
         {/* <pre>{JSON.stringify(methods.watch(), null, 2)}</pre> */}
-        <div className="bg-white space-y-12 overflow-hidden  rounded-lg border ">
+        <div className="bg-white space-y-12 overflow-hidden  rounded-lg">
           <StepperLabel steps={steps} activeStep={activeStep} />
           <div className="w-full">
             <div className="flex  flex-col gap-8">

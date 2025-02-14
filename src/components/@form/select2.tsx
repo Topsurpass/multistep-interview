@@ -31,32 +31,29 @@ export default function Select({
 	...others
 }: ITextField) {
 	return (
-		<FormField
-			control={control}
-			name={name}
-			render={({ field }) => (
-				<FormItem className="space-y-5 text-left">
-					<FormLabel className="text-sm font-medium">
-						{label}
-					</FormLabel>
-					<FormSelect
-						onValueChange={field.onChange}
-						defaultValue={field.value}
-					>
-						<FormControl>
-							<SelectTrigger className="h-12">
-								<SelectValue {...others} placeholder={placeholder} />
-							</SelectTrigger>
-						</FormControl>
-						<SelectContent>
-							{typeof selectOptions === "function"
-								? selectOptions()
-								: selectOptions}
-						</SelectContent>
-					</FormSelect>
-					<FormMessage className="text-xs" />
-				</FormItem>
-			)}
-		/>
-	);
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormItem className="space-y-5 text-left">
+          <FormLabel className="md:text-lg font-semibold text-gray-900 ">
+            {label}
+          </FormLabel>
+          <FormSelect onValueChange={field.onChange} defaultValue={field.value}>
+            <FormControl>
+              <SelectTrigger className="h-12">
+                <SelectValue {...others} placeholder={placeholder} />
+              </SelectTrigger>
+            </FormControl>
+            <SelectContent>
+              {typeof selectOptions === "function"
+                ? selectOptions()
+                : selectOptions}
+            </SelectContent>
+          </FormSelect>
+          <FormMessage className="text-xs" />
+        </FormItem>
+      )}
+    />
+  );
 }

@@ -17,10 +17,10 @@ export default function StepperLabel({ steps, activeStep }: IStepperLabel) {
   return (
     <div className="border-b border-gray-100 bg-white px-6 py-5">
       <div className="mb-6 space-y-2">
-        <h1 className="text-xl font-semibold text-gray-900 md:text-2xl">
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
           Cargo Shipment Booking
         </h1>
-        <p className="text-sm text-gray-500 md:text-base">
+        <p className="text-sm md:text-lg text-gray-600 leading-8">
           {`Complete your shipment in ${steps.length} steps`}
         </p>
       </div>
@@ -70,12 +70,12 @@ export default function StepperLabel({ steps, activeStep }: IStepperLabel) {
                 <div className="mt-3 text-center hidden md:grid">
                   <p
                     className={cn(
-                      "text-sm font-medium",
+                      "text-sm md:text-lg font-medium",
                       isCompleted
                         ? "text-green-600"
                         : isActive
                         ? "text-primary"
-                        : "text-gray-500"
+                        : "text-gray-300"
                     )}
                   >
                     {step.title}
@@ -103,7 +103,7 @@ export default function StepperLabel({ steps, activeStep }: IStepperLabel) {
         <Progress
           value={progressValue}
           className="mt-2 h-2 bg-gray-100"
-        //   indicatorClassName="bg-primary"
+          //   indicatorClassName="bg-primary"
         />
       </div>
     </div>
